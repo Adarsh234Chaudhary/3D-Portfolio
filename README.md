@@ -1,7 +1,7 @@
 # 🌌 Kairos — High-End 3D Interactive Design Portfolio
 
 An immersive, futuristic, scroll-driven 3D web experience built with **React 19**, **TypeScript**, **Three.js (WebGL)**, and **Tailwind CSS**. *Kairos* features a continuous 3D torus knot transformation engine, starfield particle system, interactive project showcase, material study sandbox, synthesized spatial sound effects, and HUD control center.
-
+ 
 ---
 
 ## ✨ Features
