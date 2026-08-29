@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { ChevronRight, Sparkles } from 'lucide-react';
+import { ChevronRight, ExternalLink, Github, Sparkles } from 'lucide-react';
 import { Project } from '../types';
 import { sound } from '../utils/audio';
 
@@ -21,14 +21,14 @@ export const CaseStudiesOverlay: React.FC<CaseStudiesOverlayProps> = ({
   onSelectProject,
   onJumpToProject
 }) => {
-  // Case Studies span 0.35 to 0.78
-  if (scrollProgress < 0.33 || scrollProgress > 0.80) {
+  // Case Studies span 0.44 to 0.65
+  if (scrollProgress < 0.43 || scrollProgress > 0.66) {
     return null;
   }
 
-  // Range is 0.35 to 0.78 (span of 0.43)
-  const rangeStart = 0.35;
-  const rangeEnd = 0.78;
+  // Range is 0.44 to 0.65 (span of 0.21)
+  const rangeStart = 0.44;
+  const rangeEnd = 0.65;
   const normalized = Math.min(Math.max((scrollProgress - rangeStart) / (rangeEnd - rangeStart), 0), 0.999);
   const activeIndex = Math.min(Math.floor(normalized * projects.length), projects.length - 1);
   const currentProject = projects[activeIndex];
@@ -51,10 +51,10 @@ export const CaseStudiesOverlay: React.FC<CaseStudiesOverlayProps> = ({
 
   return (
     <div className="fixed inset-0 z-20 flex items-center justify-between p-6 sm:p-12 lg:p-16 pointer-events-none select-none font-['Space_Grotesk']">
-      {/* Vertical Section Identifier (Matching Image 2 style: `03 — WORK`) */}
+      {/* Vertical Section Identifier */}
       <div className="fixed left-6 sm:left-10 top-1/2 -translate-y-1/2 z-30 flex items-center -rotate-90 origin-left pointer-events-none">
         <span className="font-mono text-[10px] sm:text-xs tracking-[0.28em] text-white/50 uppercase whitespace-nowrap">
-          03 — WORK
+          03 — PROJECTS
         </span>
       </div>
 
@@ -67,14 +67,14 @@ export const CaseStudiesOverlay: React.FC<CaseStudiesOverlayProps> = ({
         }}
         className="w-full max-w-xl lg:max-w-2xl pointer-events-auto pl-4 sm:pl-8"
       >
-        <div className="p-6 sm:p-8 rounded-3xl bg-black/50 border border-white/[0.1] backdrop-blur-2xl shadow-[0_16px_48px_-12px_rgba(0,0,0,0.8)] hover:border-white/20 transition-all duration-300">
+        <div className="p-6 sm:p-8 rounded-3xl bg-black/55 border border-white/[0.12] backdrop-blur-2xl shadow-[0_16px_48px_-12px_rgba(0,0,0,0.8)] hover:border-white/25 transition-all duration-300">
           {/* Metadata Header */}
-          <div className="flex items-center justify-between gap-2 pb-4 border-b border-white/[0.08] mb-5">
+          <div className="flex items-center justify-between gap-2 pb-3.5 border-b border-white/[0.08] mb-4">
             <div className="flex items-center gap-3">
-              <span className="font-mono text-xs font-bold text-white tracking-widest px-2.5 py-0.5 rounded bg-white/10">
+              <span className="font-mono text-xs font-bold text-black bg-[#f6c344] tracking-widest px-2.5 py-0.5 rounded">
                 PROJ {currentProject.number}
               </span>
-              <span className="font-mono text-[11px] text-white/50 uppercase tracking-wider">
+              <span className="font-mono text-[11px] text-white/60 uppercase tracking-wider">
                 {currentProject.category}
               </span>
             </div>
@@ -84,8 +84,8 @@ export const CaseStudiesOverlay: React.FC<CaseStudiesOverlayProps> = ({
           </div>
 
           {/* Title & Subtitle */}
-          <div className="mb-4">
-            <h2 className="font-['Space_Grotesk'] font-medium text-2xl sm:text-4xl text-white tracking-tight uppercase leading-tight mb-2">
+          <div className="mb-3">
+            <h2 className="font-['Space_Grotesk'] font-medium text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight uppercase leading-tight mb-1.5">
               {currentProject.title}
             </h2>
             <p className="text-xs sm:text-sm text-white/70 font-light">
@@ -94,40 +94,65 @@ export const CaseStudiesOverlay: React.FC<CaseStudiesOverlayProps> = ({
           </div>
 
           {/* Summary Text */}
-          <p className="text-xs sm:text-sm text-white/60 leading-relaxed font-light mb-6">
+          <p className="text-xs sm:text-sm text-white/60 leading-relaxed font-light mb-4">
             {currentProject.summary}
           </p>
 
           {/* Key Metrics Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 p-3 rounded-2xl bg-black/60 border border-white/[0.06] mb-6">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 p-3 rounded-2xl bg-black/60 border border-white/[0.06] mb-5">
             {currentProject.metrics.map((m, idx) => (
-              <div key={idx} className="p-2">
-                <div className="font-mono text-[9px] sm:text-[10px] text-white/40 uppercase tracking-wider truncate">
+              <div key={idx} className="p-1.5">
+                <div className="font-mono text-[9px] text-white/40 uppercase tracking-wider truncate">
                   {m.label}
                 </div>
-                <div className="text-xs sm:text-sm font-semibold text-white mt-0.5 truncate">
+                <div className="text-xs font-semibold text-white mt-0.5 truncate">
                   {m.value}
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Action Row */}
-          <div className="flex items-center justify-between gap-3 pt-2">
+          {/* Action Row: Live Demo + GitHub Repo + Case Study Modal */}
+          <div className="flex flex-wrap items-center gap-2.5 pt-2 border-t border-white/[0.08]">
+            {/* Live Demo Link Button */}
+            {currentProject.liveUrl && (
+              <a
+                href={currentProject.liveUrl}
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => sound.playClick()}
+                className="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-gradient-to-r from-[#f6c344] to-[#f97316] text-black font-semibold text-xs font-mono tracking-wider uppercase hover:opacity-90 active:scale-95 transition-all shadow-[0_0_16px_rgba(246,195,68,0.25)]"
+              >
+                <span>Live Demo</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            )}
+
+            {/* GitHub Repo Link Button */}
+            {currentProject.githubUrl && (
+              <a
+                href={currentProject.githubUrl}
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => sound.playClick()}
+                className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white/[0.08] hover:bg-white/[0.15] text-white text-xs font-mono tracking-wider uppercase transition-colors border border-white/10"
+              >
+                <Github className="w-3.5 h-3.5 text-[#38bdf8]" />
+                <span>GitHub</span>
+              </a>
+            )}
+
+            {/* Inspect Modal Button */}
             <button
               onClick={() => {
                 sound.playClick(true);
                 onSelectProject(currentProject);
               }}
-              className="group flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-white text-black font-medium text-xs tracking-wider uppercase hover:bg-white/90 active:scale-95 transition-all shadow-[0_0_20px_rgba(255,255,255,0.15)] cursor-pointer"
+              className="ml-auto flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white/[0.04] hover:bg-white/[0.1] text-white/80 hover:text-white text-xs font-mono tracking-wider transition-colors border border-white/[0.08] cursor-pointer"
             >
-              <span>Inspect Case Study</span>
-              <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+              <span>Architecture</span>
+              <ChevronRight className="w-3.5 h-3.5" />
             </button>
-
-            <span className="hidden sm:inline-block font-mono text-[11px] text-white/40">
-              CLIENT: {currentProject.client.split(' ')[0]}
-            </span>
           </div>
         </div>
       </div>
@@ -163,3 +188,4 @@ export const CaseStudiesOverlay: React.FC<CaseStudiesOverlayProps> = ({
     </div>
   );
 };
+

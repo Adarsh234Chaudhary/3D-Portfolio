@@ -9,6 +9,8 @@ export interface Project {
   role: string;
   summary: string;
   description: string;
+  liveUrl?: string;
+  githubUrl?: string;
   metrics: {
     label: string;
     value: string;
@@ -21,6 +23,60 @@ export interface Project {
     title: string;
     description: string;
   }[];
+}
+
+export interface SkillCategory {
+  id: string;
+  category: string;
+  iconName: string;
+  description: string;
+  skills: {
+    name: string;
+    level: string; // e.g. "Advanced", "Proficient", "Expert"
+    icon?: string;
+  }[];
+}
+
+export interface Certificate {
+  id: string;
+  number: string;
+  title: string;
+  issuer: string;
+  issueDate: string;
+  credentialId: string;
+  verificationUrl?: string;
+  certificateImage: string;
+  badgeColor: string;
+  category: string;
+  skillsCovered: string[];
+  description: string;
+}
+
+export interface EducationItem {
+  id: string;
+  number: string;
+  degree: string;
+  major: string;
+  institution: string;
+  location: string;
+  period: string;
+  gpa: string;
+  status: string;
+  coursework: string[];
+  highlights: string[];
+}
+
+export interface PersonalInfo {
+  name: string;
+  title: string;
+  subtitle: string;
+  bio: string;
+  email: string;
+  location: string;
+  githubUrl: string;
+  linkedinUrl: string;
+  cvUrl: string;
+  avatarUrl: string;
 }
 
 export interface Capability {
@@ -62,3 +118,4 @@ export interface ScrollState {
   direction: 'down' | 'up' | 'idle';
   currentFrame: number; // 1 to 120
 }
+

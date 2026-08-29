@@ -4,29 +4,30 @@
  */
 
 import React, { useState } from 'react';
-import { CLIENT_ROSTER } from '../data/projects';
-import { Send, CheckCircle2, Mail, Sparkles, ArrowUp } from 'lucide-react';
+import { Send, CheckCircle2, Mail, Sparkles, ArrowUp, Github, Linkedin, FileText, MapPin } from 'lucide-react';
+import { PERSONAL_INFO } from '../data/portfolio';
 import confetti from 'canvas-confetti';
 import { sound } from '../utils/audio';
 
 interface ContactOverlayProps {
   scrollProgress: number;
   onScrollToTop: () => void;
+  onOpenCV?: () => void;
 }
 
-export const ContactOverlay: React.FC<ContactOverlayProps> = ({ scrollProgress, onScrollToTop }) => {
-  const [selectedScopes, setSelectedScopes] = useState<string[]>(['Creative Direction']);
+export const ContactOverlay: React.FC<ContactOverlayProps> = ({ scrollProgress, onScrollToTop, onOpenCV }) => {
+  const [selectedScopes, setSelectedScopes] = useState<string[]>(['Full-Stack Development']);
   const [clientEmail, setClientEmail] = useState('');
   const [projectBrief, setProjectBrief] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  // Visible between 0.88 and 1.00
+  // Visible between 0.91 and 1.00
   let opacity = 0;
   let translateY = 40;
   let pointerEvents = 'pointer-events-none';
 
-  if (scrollProgress >= 0.88) {
-    const factor = Math.min((scrollProgress - 0.88) / (0.94 - 0.88), 1.0);
+  if (scrollProgress >= 0.91) {
+    const factor = Math.min((scrollProgress - 0.91) / (0.96 - 0.91), 1.0);
     opacity = factor;
     translateY = 40 * (1 - factor);
     pointerEvents = 'pointer-events-auto';
@@ -59,10 +60,10 @@ export const ContactOverlay: React.FC<ContactOverlayProps> = ({ scrollProgress, 
   };
 
   const scopes = [
-    'Creative Direction',
-    'Spatial OS & 3D Shaders',
-    'Luxury Brand Identity',
-    'Interactive WebGL Flagship'
+    'Full-Stack Software Engineering',
+    'Interactive 3D / WebGL Graphics',
+    'Distributed Systems & Cloud',
+    'Open Source & Research'
   ];
 
   return (
@@ -74,44 +75,81 @@ export const ContactOverlay: React.FC<ContactOverlayProps> = ({ scrollProgress, 
       }}
       className={`fixed inset-0 z-20 overflow-y-auto px-6 sm:px-12 py-20 max-w-6xl mx-auto flex flex-col justify-between ${pointerEvents} select-none font-['Space_Grotesk']`}
     >
-      {/* Vertical Section Identifier (`05 — CONTACT`) */}
+      {/* Vertical Section Identifier */}
       <div className="fixed left-6 sm:left-10 top-1/2 -translate-y-1/2 z-30 flex items-center -rotate-90 origin-left pointer-events-none">
         <span className="font-mono text-[10px] sm:text-xs tracking-[0.28em] text-white/50 uppercase whitespace-nowrap">
-          05 — CONTACT
+          06 — CONTACT
         </span>
       </div>
 
       {/* Main Inquiry Form Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start my-auto pl-4 sm:pl-8">
-        {/* Left Column: Studio Info */}
+        {/* Left Column: CSE Profile & Direct Channels */}
         <div className="lg:col-span-5 flex flex-col gap-6">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] backdrop-blur-xl mb-3">
               <span className="w-1.5 h-1.5 rounded-full bg-[#f6c344] animate-pulse" />
               <span className="font-mono text-[10px] tracking-[0.2em] text-white/80 uppercase">
-                DEEP SPACE TRANSMISSION
+                GET IN TOUCH &amp; COLLABORATE
               </span>
             </div>
             <h2 className="font-light text-3xl sm:text-5xl text-white tracking-tight uppercase leading-tight">
               LET'S BUILD <br />
               <span className="font-medium text-transparent bg-clip-text bg-gradient-to-r from-[#f6c344] via-white to-[#38bdf8]">
-                THE EXTRAORDINARY
+                SCALABLE SYSTEMS
               </span>
             </h2>
             <p className="text-xs sm:text-sm text-white/60 mt-3 leading-relaxed font-light">
-              Available for select creative direction engagements, bespoke WebGL architectures, and spatial brand systems.
+              Open to full-time Software Engineer opportunities, high-impact internships, research collaborations, and creative full-stack contracts.
             </p>
           </div>
 
-          <div className="p-5 rounded-2xl bg-black/40 border border-white/[0.08] backdrop-blur-xl flex flex-col gap-3">
-            <div className="flex items-center gap-3 text-xs text-white/80">
-              <Mail className="w-4 h-4 text-[#f6c344]" />
-              <span className="font-mono">adarsh@chaudhary.design</span>
+          <div className="p-5 rounded-2xl bg-black/40 border border-white/[0.08] backdrop-blur-xl flex flex-col gap-3.5">
+            <div className="flex items-center gap-3 text-xs text-white/90">
+              <Mail className="w-4 h-4 text-[#f6c344] shrink-0" />
+              <a href={`mailto:${PERSONAL_INFO.email}`} className="font-mono hover:text-[#f6c344] transition-colors">
+                {PERSONAL_INFO.email}
+              </a>
             </div>
-            <div className="flex items-center gap-4 text-xs text-white/50 pt-2 border-t border-white/[0.05]">
-              <a href="https://twitter.com" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">X / TWITTER</a>
-              <a href="https://github.com" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">GITHUB</a>
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">LINKEDIN</a>
+
+            <div className="flex items-center gap-3 text-xs text-white/70 font-mono">
+              <MapPin className="w-4 h-4 text-[#38bdf8] shrink-0" />
+              <span>{PERSONAL_INFO.location} • Available Globally (Remote / Relocation)</span>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-3 pt-3 border-t border-white/[0.08] text-xs font-mono">
+              <a
+                href={PERSONAL_INFO.githubUrl}
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => sound.playClick()}
+                className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/[0.05] hover:bg-white/[0.12] text-white/80 hover:text-white transition-colors"
+              >
+                <Github className="w-3.5 h-3.5 text-[#f6c344]" />
+                <span>GitHub</span>
+              </a>
+
+              <a
+                href={PERSONAL_INFO.linkedinUrl}
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => sound.playClick()}
+                className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/[0.05] hover:bg-white/[0.12] text-white/80 hover:text-white transition-colors"
+              >
+                <Linkedin className="w-3.5 h-3.5 text-[#38bdf8]" />
+                <span>LinkedIn</span>
+              </a>
+
+              <a
+                href={PERSONAL_INFO.cvUrl}
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => sound.playClick(true)}
+                className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#f6c344]/15 hover:bg-[#f6c344]/25 text-[#f6c344] transition-colors cursor-pointer border border-[#f6c344]/30"
+              >
+                <FileText className="w-3.5 h-3.5" />
+                <span>Resume / CV</span>
+              </a>
             </div>
           </div>
         </div>
@@ -124,22 +162,22 @@ export const ContactOverlay: React.FC<ContactOverlayProps> = ({ scrollProgress, 
                 <div className="w-12 h-12 rounded-full bg-emerald-400/10 border border-emerald-400/30 flex items-center justify-center text-emerald-400">
                   <CheckCircle2 className="w-6 h-6" />
                 </div>
-                <h3 className="font-medium text-xl text-white">Transmission Dispatched</h3>
+                <h3 className="font-medium text-xl text-white">Message Transmitted</h3>
                 <p className="text-xs sm:text-sm text-white/60 max-w-sm">
-                  Your brief has traversed the deep starfield. Adarsh will review your inquiry within 24 hours.
+                  Your message has been received! Adarsh will get back to you promptly.
                 </p>
                 <button
                   onClick={() => setIsSubmitted(false)}
                   className="mt-2 text-xs font-mono text-white/50 hover:text-white underline cursor-pointer"
                 >
-                  Send another transmission
+                  Send another message
                 </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="flex flex-col gap-5">
                 <div>
                   <label className="block font-mono text-[11px] text-white/50 uppercase tracking-wider mb-2.5">
-                    Select Scope of Engagement
+                    Opportunity / Topic Area
                   </label>
                   <div className="flex flex-wrap gap-2">
                     {scopes.map(s => {
@@ -164,12 +202,12 @@ export const ContactOverlay: React.FC<ContactOverlayProps> = ({ scrollProgress, 
 
                 <div>
                   <label className="block font-mono text-[11px] text-white/50 uppercase tracking-wider mb-2">
-                    Direct Email
+                    Your Contact Email
                   </label>
                   <input
                     type="email"
                     required
-                    placeholder="partner@studio.com"
+                    placeholder="recruiter@tech.com or founder@startup.io"
                     value={clientEmail}
                     onChange={e => setClientEmail(e.target.value)}
                     className="w-full px-4 py-3 rounded-xl bg-black/60 border border-white/[0.08] text-white placeholder-white/20 text-xs sm:text-sm focus:outline-none focus:border-white/40 font-mono"
@@ -178,11 +216,11 @@ export const ContactOverlay: React.FC<ContactOverlayProps> = ({ scrollProgress, 
 
                 <div>
                   <label className="block font-mono text-[11px] text-white/50 uppercase tracking-wider mb-2">
-                    Project Vision / Scope
+                    Message / Opportunity Scope
                   </label>
                   <textarea
                     rows={3}
-                    placeholder="Briefly describe the challenge, timeline, and spatial ambitions..."
+                    placeholder="Tell me about your team, role opening, project challenge, or tech stack..."
                     value={projectBrief}
                     onChange={e => setProjectBrief(e.target.value)}
                     className="w-full px-4 py-3 rounded-xl bg-black/60 border border-white/[0.08] text-white placeholder-white/20 text-xs sm:text-sm focus:outline-none focus:border-white/40 resize-none font-light"
@@ -194,7 +232,7 @@ export const ContactOverlay: React.FC<ContactOverlayProps> = ({ scrollProgress, 
                   className="w-full flex items-center justify-center gap-2 py-3.5 rounded-full bg-gradient-to-r from-[#f6c344] to-[#f97316] text-black font-semibold text-xs uppercase tracking-widest hover:opacity-90 active:scale-[0.99] transition-all shadow-[0_0_24px_rgba(246,195,68,0.25)] cursor-pointer"
                 >
                   <Send className="w-3.5 h-3.5" />
-                  <span>Transmit Inquiry</span>
+                  <span>Send Direct Message</span>
                 </button>
               </form>
             )}
@@ -212,15 +250,16 @@ export const ContactOverlay: React.FC<ContactOverlayProps> = ({ scrollProgress, 
           className="group flex items-center gap-2 text-xs font-mono text-white/60 hover:text-white uppercase tracking-wider cursor-pointer"
         >
           <ArrowUp className="w-3.5 h-3.5 group-hover:-translate-y-0.5 transition-transform text-[#f6c344]" />
-          <span>WARP BACK TO ORIGIN</span>
+          <span>BACK TO TOP</span>
         </button>
 
         <div className="flex items-center gap-2 font-mono text-xs text-white/60 tracking-widest">
           <span className="text-white/40">01</span>
           <span className="w-6 h-[1px] bg-white/30" />
-          <span className="text-[#f6c344] font-semibold">05</span>
+          <span className="text-[#f6c344] font-semibold">06</span>
         </div>
       </div>
     </div>
   );
 };
+
