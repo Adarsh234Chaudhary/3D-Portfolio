@@ -6,7 +6,7 @@ import { sound } from '../utils/audio';
 interface SkillsOverlayProps {
   scrollProgress: number;
 }
-
+ 
 export const SkillsOverlay: React.FC<SkillsOverlayProps> = ({ scrollProgress }) => {
   const [activeCategory, setActiveCategory] = useState<number>(0);
 

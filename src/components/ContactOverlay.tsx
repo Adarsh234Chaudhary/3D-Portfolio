@@ -14,7 +14,7 @@ interface ContactOverlayProps {
   onScrollToTop: () => void;
   onOpenCV?: () => void;
 }
-
+ 
 export const ContactOverlay: React.FC<ContactOverlayProps> = ({ scrollProgress, onScrollToTop, onOpenCV }) => {
   const [selectedScopes, setSelectedScopes] = useState<string[]>(['Full-Stack Development']);
   const [clientEmail, setClientEmail] = useState('');

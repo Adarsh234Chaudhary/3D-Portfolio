@@ -2,7 +2,7 @@
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
-
+ 
 import React, { useState } from 'react';
 import { Volume2, VolumeX, Maximize2, Minimize2, FileText, Menu, X, ExternalLink } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolio';

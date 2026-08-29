@@ -7,7 +7,7 @@
  * Web Audio API synthesizer for tactile UI micro-interactions
  * Generates organic sub-audible clicks, detents, and glass harmonics without any external audio files.
  */
-
+ 
 class SoundEngine {
   private ctx: AudioContext | null = null;
   private isMuted: boolean = false;

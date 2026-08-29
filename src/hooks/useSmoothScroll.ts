@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { sound } from '../utils/audio';
-
+ 
 const TOTAL_FRAMES = 120;
 const LERP_FACTOR = 0.085; // Silky smooth damping
 

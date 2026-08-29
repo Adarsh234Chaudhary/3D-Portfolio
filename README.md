@@ -3,7 +3,7 @@
 An immersive, futuristic, scroll-driven 3D web experience built with **React 19**, **TypeScript**, **Three.js (WebGL)**, and **Tailwind CSS**. *Kairos* features a continuous 3D torus knot transformation engine, starfield particle system, interactive project showcase, material study sandbox, synthesized spatial sound effects, and HUD control center.
  
 ---
-
+ 
 ## ✨ Features
 
 - **🌀 Dynamic 3D WebGL Engine**: Real-time rendering of a shiny glass torus knot with dynamic lighting, smooth camera track zooming, structural shatter physics, and cosmic starfield particle animations.

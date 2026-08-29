@@ -9,7 +9,7 @@ import { Capability } from '../types';
 
 interface CapabilitiesOverlayProps {
   scrollProgress: number;
-}
+} 
 
 export const CapabilitiesOverlay: React.FC<CapabilitiesOverlayProps> = ({ scrollProgress }) => {
   // Visible between 0.77 and 0.89 in deep space

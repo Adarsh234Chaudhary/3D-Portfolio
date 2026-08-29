@@ -10,7 +10,7 @@ interface CertificateModalProps {
 
 export const CertificateModal: React.FC<CertificateModalProps> = ({ certificate, onClose }) => {
   const [copied, setCopied] = React.useState(false);
-
+ 
   if (!certificate) return null;
 
   const handleCopyId = () => {

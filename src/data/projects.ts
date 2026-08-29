@@ -1,5 +1,5 @@
 import { Project, Capability } from '../types';
-
+ 
 export const PROJECTS: Project[] = [
   {
     id: 'aetheria-audio',

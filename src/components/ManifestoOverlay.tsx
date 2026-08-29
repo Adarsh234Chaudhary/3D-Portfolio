@@ -10,7 +10,7 @@ import { ABOUT_DATA, PERSONAL_INFO } from '../data/portfolio';
 interface ManifestoOverlayProps {
   scrollProgress: number;
 }
-
+ 
 export const ManifestoOverlay: React.FC<ManifestoOverlayProps> = ({ scrollProgress }) => {
   // Visible in the deep cosmic starfield phase: between 0.15 and 0.28
   let opacity = 0;

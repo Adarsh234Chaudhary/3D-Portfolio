@@ -10,7 +10,7 @@ interface CanvasScrubberProps {
 }
 
 const TOTAL_FRAMES = 120;
-
+ 
 export const CanvasScrubber: React.FC<CanvasScrubberProps> = ({
   currentFrame,
   scrollProgress,

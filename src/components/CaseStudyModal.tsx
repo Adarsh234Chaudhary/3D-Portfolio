@@ -8,7 +8,7 @@ interface CaseStudyModalProps {
   onClose: () => void;
   onSelectProject: (p: Project) => void;
   allProjects: Project[];
-}
+} 
 
 export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
   project,

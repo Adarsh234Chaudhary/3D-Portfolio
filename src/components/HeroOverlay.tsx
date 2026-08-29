@@ -14,7 +14,7 @@ interface HeroOverlayProps {
   onNavigate?: (fraction: number) => void;
   onOpenCV?: () => void;
 }
-
+ 
 export function HeroOverlay({ scrollProgress, onExploreClick, onNavigate, onOpenCV }: HeroOverlayProps) {
   // Hero is visible between 0.00 and 0.18
   let opacity = 1.0;

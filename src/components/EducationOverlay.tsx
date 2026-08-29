@@ -11,7 +11,7 @@ export const EducationOverlay: React.FC<EducationOverlayProps> = ({ scrollProgre
   let opacity = 0;
   let translateY = 35;
   let pointerEvents = 'pointer-events-none';
-
+ 
   if (scrollProgress >= 0.79 && scrollProgress < 0.83) {
     const factor = (scrollProgress - 0.79) / (0.83 - 0.79);
     opacity = factor;

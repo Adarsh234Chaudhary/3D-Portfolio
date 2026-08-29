@@ -8,7 +8,7 @@ interface AchievementsOverlayProps {
   scrollProgress: number;
   onSelectCertificate: (cert: Certificate) => void;
 }
-
+ 
 export const AchievementsOverlay: React.FC<AchievementsOverlayProps> = ({
   scrollProgress,
   onSelectCertificate
