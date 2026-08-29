@@ -2,7 +2,7 @@
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
- 
+
 import React, { useState, useEffect } from 'react';
 import { useSmoothScroll } from './hooks/useSmoothScroll';
 import { CanvasScrubber } from './components/CanvasScrubber';
@@ -95,7 +95,7 @@ export default function App() {
   }
 
   return (
-    <main className="relative min-h-[600vh] bg-[#040406] text-[#e5e5e5] select-none font-['Space_Grotesk']">
+    <main className="relative min-h-[600vh] w-full max-w-[100vw] overflow-x-hidden bg-[#040406] text-[#e5e5e5] select-none font-['Space_Grotesk']">
       {/* 1. Fixed Viewport 3D Engine */}
       {viewMode === 'webgl' ? (
         <ThreeCanvas scrollProgress={scrollProgress} />

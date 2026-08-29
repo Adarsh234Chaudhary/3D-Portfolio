@@ -2,7 +2,7 @@
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
- 
+
 import React from 'react';
 import { ChevronRight, ExternalLink, Github, Sparkles } from 'lucide-react';
 import { Project } from '../types';

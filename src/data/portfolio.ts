@@ -12,7 +12,7 @@ export const PERSONAL_INFO: PersonalInfo = {
   cvUrl: 'https://drive.google.com/file/d/1sample_drive_resume_link/view?usp=sharing',
   avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80'
 };
- 
+
 export const ABOUT_DATA = {
   sectionNumber: '01',
   tagline: 'COMPUTER SCIENCE & ENGINEERING',

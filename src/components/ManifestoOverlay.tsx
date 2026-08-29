@@ -10,7 +10,7 @@ import { ABOUT_DATA, PERSONAL_INFO } from '../data/portfolio';
 interface ManifestoOverlayProps {
   scrollProgress: number;
 }
- 
+
 export const ManifestoOverlay: React.FC<ManifestoOverlayProps> = ({ scrollProgress }) => {
   // Visible in the deep cosmic starfield phase: between 0.15 and 0.28
   let opacity = 0;
@@ -41,7 +41,7 @@ export const ManifestoOverlay: React.FC<ManifestoOverlayProps> = ({ scrollProgre
         transform: `translate3d(0, ${translateY}px, 0)`,
         transition: 'opacity 0.1s ease-out, transform 0.1s ease-out'
       }}
-      className={`fixed inset-0 z-20 overflow-y-auto py-16 px-6 sm:px-12 max-w-6xl mx-auto flex flex-col justify-center items-center ${pointerEvents} select-none font-['Space_Grotesk']`}
+      className={`fixed inset-0 z-20 overflow-hidden py-16 px-6 sm:px-12 max-w-6xl mx-auto flex flex-col justify-center items-center ${pointerEvents} select-none font-['Space_Grotesk']`}
     >
       {/* Vertical Section Identifier */}
       <div className="fixed left-6 sm:left-10 top-1/2 -translate-y-1/2 z-30 flex items-center -rotate-90 origin-left pointer-events-none">

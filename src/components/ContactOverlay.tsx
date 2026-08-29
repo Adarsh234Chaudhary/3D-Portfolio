@@ -14,7 +14,7 @@ interface ContactOverlayProps {
   onScrollToTop: () => void;
   onOpenCV?: () => void;
 }
- 
+
 export const ContactOverlay: React.FC<ContactOverlayProps> = ({ scrollProgress, onScrollToTop, onOpenCV }) => {
   const [selectedScopes, setSelectedScopes] = useState<string[]>(['Full-Stack Development']);
   const [clientEmail, setClientEmail] = useState('');
@@ -73,7 +73,7 @@ export const ContactOverlay: React.FC<ContactOverlayProps> = ({ scrollProgress, 
         transform: `translate3d(0, ${translateY}px, 0)`,
         transition: 'opacity 0.1s ease-out, transform 0.1s ease-out'
       }}
-      className={`fixed inset-0 z-20 overflow-y-auto px-6 sm:px-12 py-20 max-w-6xl mx-auto flex flex-col justify-between ${pointerEvents} select-none font-['Space_Grotesk']`}
+      className={`fixed inset-0 z-20 overflow-hidden px-6 sm:px-12 py-16 max-w-6xl mx-auto flex flex-col justify-between ${pointerEvents} select-none font-['Space_Grotesk']`}
     >
       {/* Vertical Section Identifier */}
       <div className="fixed left-6 sm:left-10 top-1/2 -translate-y-1/2 z-30 flex items-center -rotate-90 origin-left pointer-events-none">

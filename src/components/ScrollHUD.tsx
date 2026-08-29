@@ -2,7 +2,7 @@
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
- 
+
 import React from 'react';
 import { ChevronLeft, ChevronRight, Activity, Sparkles } from 'lucide-react';
 import { sound } from '../utils/audio';

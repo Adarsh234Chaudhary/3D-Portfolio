@@ -51,7 +51,7 @@ export interface Certificate {
   skillsCovered: string[];
   description: string;
 }
- 
+
 export interface EducationItem {
   id: string;
   number: string;

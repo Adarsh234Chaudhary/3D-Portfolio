@@ -11,7 +11,7 @@ interface ThreeCanvasProps {
   scrollProgress: number;
   onExplosionTrigger?: (isExploded: boolean) => void;
 }
- 
+
 export const ThreeCanvas: React.FC<ThreeCanvasProps> = ({ scrollProgress, onExplosionTrigger }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const scrollProgressRef = useRef(scrollProgress);
