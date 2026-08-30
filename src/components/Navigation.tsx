@@ -61,7 +61,7 @@ export const Navigation: React.FC<NavigationProps> = ({
     { label: 'SKILLS', fraction: 0.36, active: isSkills },
     { label: 'PROJECTS', fraction: 0.54, active: isProjects },
     { label: 'ACHIEVEMENTS', fraction: 0.73, active: isAchievements },
-    { label: 'EDUCATION', fraction: 0.85, active: isEducation },
+    { label: 'EDUCATION', fraction: 0.82, active: isEducation },
     { label: 'CONTACT', fraction: 0.96, active: isContact },
   ];
 

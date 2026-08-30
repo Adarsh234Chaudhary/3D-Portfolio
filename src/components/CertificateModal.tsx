@@ -1,7 +1,8 @@
 import React from 'react';
-import { X, ExternalLink, Award, CheckCircle2, ShieldCheck, Download, Copy, Check } from 'lucide-react';
+import { X, Award, CheckCircle2, Download, Copy, Check } from 'lucide-react';
 import { Certificate } from '../types';
 import { sound } from '../utils/audio';
+import { formatImageUrl } from '../utils/image';
 
 interface CertificateModalProps {
   certificate: Certificate | null;
@@ -69,16 +70,10 @@ export const CertificateModal: React.FC<CertificateModalProps> = ({ certificate,
         {/* Certificate Display Window */}
         <div className="relative w-full rounded-2xl overflow-hidden border border-white/15 bg-black/60 shadow-2xl group">
           <img
-            src={certificate.certificateImage}
+            src={formatImageUrl(certificate.certificateImage)}
             alt={certificate.title}
             className="w-full max-h-[380px] object-cover object-center group-hover:scale-[1.02] transition-transform duration-500"
           />
-
-          {/* Watermark / Verified Badge Overlay */}
-          <div className="absolute top-4 right-4 flex items-center gap-2 px-3 py-1 rounded-full bg-black/80 border border-emerald-400/40 backdrop-blur-md text-emerald-400 text-xs font-mono tracking-wider shadow-lg">
-            <ShieldCheck className="w-4 h-4" />
-            <span>OFFICIALLY VERIFIED</span>
-          </div>
 
           {/* Issuer Tag Bottom Left */}
           <div className="absolute bottom-4 left-4 flex items-center gap-2 px-3 py-1.5 rounded-xl bg-black/85 border border-white/20 backdrop-blur-md text-white text-xs font-mono">
@@ -120,7 +115,7 @@ export const CertificateModal: React.FC<CertificateModalProps> = ({ certificate,
             </div>
           </div>
 
-          {/* Right Column: Verification & Actions */}
+          {/* Right Column: Actions */}
           <div className="md:col-span-5 flex flex-col justify-between gap-4 p-4 rounded-2xl bg-black/40 border border-white/[0.08]">
             <div className="flex flex-col gap-3">
               <div>
@@ -151,26 +146,13 @@ export const CertificateModal: React.FC<CertificateModalProps> = ({ certificate,
 
             {/* Action Buttons */}
             <div className="flex flex-col gap-2 pt-2 border-t border-white/[0.08]">
-              {certificate.verificationUrl && (
-                <a
-                  href={certificate.verificationUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  onClick={() => sound.playClick()}
-                  className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-white text-black font-semibold text-xs uppercase tracking-wider hover:bg-white/90 transition-all shadow-md"
-                >
-                  <span>Verify Credential Online</span>
-                  <ExternalLink className="w-3.5 h-3.5" />
-                </a>
-              )}
-
               <a
-                href={certificate.certificateImage}
+                href={formatImageUrl(certificate.certificateImage)}
                 target="_blank"
                 rel="noreferrer"
                 download={`${certificate.id}-certificate.jpg`}
                 onClick={() => sound.playClick()}
-                className="flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-white/[0.06] hover:bg-white/[0.12] text-white/80 hover:text-white text-xs font-mono tracking-wider transition-colors border border-white/10"
+                className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-white/[0.08] hover:bg-white/[0.15] text-white text-xs font-mono tracking-wider transition-colors border border-white/10"
               >
                 <Download className="w-3.5 h-3.5" />
                 <span>View Full Resolution</span>

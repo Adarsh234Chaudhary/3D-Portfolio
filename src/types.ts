@@ -44,7 +44,6 @@ export interface Certificate {
   issuer: string;
   issueDate: string;
   credentialId: string;
-  verificationUrl?: string;
   certificateImage: string;
   badgeColor: string;
   category: string;

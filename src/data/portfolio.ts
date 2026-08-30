@@ -2,48 +2,48 @@ import { Project, SkillCategory, Certificate, EducationItem, PersonalInfo } from
 
 export const PERSONAL_INFO: PersonalInfo = {
   name: 'Adarsh Chaudhary',
-  title: 'Computer Science & Engineering Student',
-  subtitle: 'Full-Stack Developer • 3D Web Enthusiast • Systems Architect',
-  bio: 'CSE undergraduate passionate about high-performance computing, real-time 3D graphics, and crafting scalable full-stack applications with elegant spatial UI.',
+  title: 'Computer Science & Engineering Student (2nd Year)',
+  subtitle: 'Full-Stack Developer • IoT Systems Enthusiast • Cyber Safety Advocate',
+  bio: '2nd-year CSE undergraduate at Lovely Professional University passionate about building scalable full-stack web applications, embedded IoT safety hardware, and driving community digital literacy & cybersecurity awareness.',
   email: 'adarshchaudhary.dev@gmail.com',
-  location: 'India',
-  githubUrl: 'https://github.com/adarshchaudhary',
-  linkedinUrl: 'https://linkedin.com/in/adarshchaudhary',
-  cvUrl: 'https://drive.google.com/file/d/1sample_drive_resume_link/view?usp=sharing',
+  location: 'Phagwara, Punjab / Amroha, UP, India',
+  githubUrl: 'https://github.com/Adarsh234Chaudhary', // Sample URL - Edit with your GitHub link
+  linkedinUrl: 'https://linkedin.com/in/your-linkedin-profile', // Sample URL - Edit with your LinkedIn link
+  cvUrl: 'https://drive.google.com/file/d/your_drive_cv_id/view?usp=sharing', // Sample URL - Edit with your CV link
   avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80'
 };
 
 export const ABOUT_DATA = {
   sectionNumber: '01',
-  tagline: 'COMPUTER SCIENCE & ENGINEERING',
-  headline: 'ARCHITECTING CODE FROM',
-  headlineAccent: 'SILICON TO SPATIAL CANVASES',
-  intro: 'I am a Computer Science & Engineering student bridging core computational fundamentals with modern spatial web engineering, distributed systems, and real-time graphics.',
+  tagline: 'COMPUTER SCIENCE & ENGINEERING (2ND YEAR)',
+  headline: 'BUILDING PRACTICAL SOLUTIONS FROM',
+  headlineAccent: 'FULL-STACK TO IOT & CYBER SAFETY',
+  intro: 'I am a 2nd-year Computer Science & Engineering student at Lovely Professional University, bridging core programming fundamentals (Python, C/C++, JavaScript, React) with real-world full-stack applications, IoT safety systems, and community cybersecurity education.',
   pillars: [
     {
       number: '01',
-      title: 'Core CS & Algorithms',
-      description: 'Strong foundation in Data Structures, Algorithm Optimization, Operating Systems, and clean Object-Oriented/Functional paradigms.',
+      title: 'Languages & Algorithms',
+      description: 'Strong foundation in Python, C, C++, Data Structures, Algorithms, Object-Oriented Logic, and fundamental problem solving.',
       accent: '#f6c344'
     },
     {
       number: '02',
-      title: 'Full-Stack Engineering',
-      description: 'Designing resilient microservices, responsive client architectures, performant REST/GraphQL APIs, and durable database models.',
+      title: 'Full-Stack Web Development',
+      description: 'Building dual-interface web platforms and REST APIs using React, JavaScript, Node.js, Express.js, MongoDB, and Tailwind CSS.',
       accent: '#38bdf8'
     },
     {
       number: '03',
-      title: 'Interactive 3D & Graphics',
-      description: 'Crafting 60+ FPS WebGL shaders, Three.js spatial simulations, and physics-driven interactive web experiences.',
+      title: 'IoT & Cyber Safety Drive',
+      description: 'Engineering ESP32 IoT gas leak detection hardware and leading WNS Cares Foundation CyberSmart awareness drives for 40+ community members.',
       accent: '#34d399'
     }
   ],
   stats: [
-    { label: 'Problem Solving', value: '450+ Solved' },
-    { label: 'Core Tech Stack', value: '15+ Technologies' },
-    { label: 'Full-Stack Apps', value: '10+ Deployed' },
-    { label: 'Academic Standing', value: 'Top Tier CSE' }
+    { label: 'Academic Standing', value: '2nd Year B.Tech CSE' },
+    { label: 'University', value: 'Lovely Professional Univ' },
+    { label: 'Community Learners', value: '40 Educated' },
+    { label: 'Core Projects', value: '3 Active Projects' }
   ]
 };
 
@@ -52,230 +52,187 @@ export const SKILLS_DATA: SkillCategory[] = [
     id: 'core-languages',
     category: 'Languages & Core CS',
     iconName: 'Code2',
-    description: 'Foundation programming languages and computational problem solving.',
+    description: 'Core programming languages, algorithmic logic, and fundamental computer science concepts.',
     skills: [
-      { name: 'C / C++', level: 'Advanced' },
-      { name: 'Java', level: 'Proficient' },
-      { name: 'Python', level: 'Advanced' },
-      { name: 'TypeScript / JavaScript', level: 'Expert' },
-      { name: 'SQL', level: 'Advanced' },
-      { name: 'Data Structures & Algorithms', level: 'Advanced' }
+      { name: 'Python', level: 'Proficient' },
+      { name: 'C', level: 'Proficient' },
+      { name: 'C++', level: 'Proficient' },
+      { name: 'JavaScript', level: 'Proficient' },
+      { name: 'React', level: 'Proficient' },
+      { name: 'Data Structures & Algorithms', level: 'Intermediate' }
     ]
   },
   {
-    id: 'frontend-3d',
-    category: 'Web & 3D Interactive',
+    id: 'web-technologies',
+    category: 'Web Development & Design',
     iconName: 'Layers',
-    description: 'Modern reactive frontend frameworks, state management, and real-time GPU rendering.',
+    description: 'Frontend frameworks, responsive web styling, and modern user interface design.',
     skills: [
-      { name: 'React 18+ / Next.js', level: 'Expert' },
-      { name: 'Three.js / WebGL / GLSL', level: 'Advanced' },
-      { name: 'Tailwind CSS', level: 'Expert' },
-      { name: 'HTML5 / Modern CSS', level: 'Expert' },
-      { name: 'Motion / Framer Motion', level: 'Proficient' },
-      { name: 'Canvas 2D / SVG Animation', level: 'Proficient' }
+      { name: 'HTML5', level: 'Advanced' },
+      { name: 'CSS3', level: 'Advanced' },
+      { name: 'React.js', level: 'Proficient' },
+      { name: 'Tailwind CSS', level: 'Proficient' },
+      { name: 'TypeScript', level: 'Intermediate' },
+      { name: 'Three.js / React Three Fiber', level: 'Basic' }
     ]
   },
   {
-    id: 'backend-cloud',
-    category: 'Backend & Cloud Infrastructure',
+    id: 'backend-databases',
+    category: 'Databases & Developer Tools',
     iconName: 'Cpu',
-    description: 'Scalable server environments, APIs, databases, and continuous delivery.',
+    description: 'Relational & NoSQL databases, backend APIs, version control, and dev tools.',
     skills: [
-      { name: 'Node.js / Express', level: 'Advanced' },
-      { name: 'FastAPI / Django', level: 'Proficient' },
-      { name: 'PostgreSQL / MySQL', level: 'Advanced' },
-      { name: 'MongoDB / Firestore', level: 'Advanced' },
-      { name: 'REST & GraphQL APIs', level: 'Advanced' },
-      { name: 'Docker / Cloud Run / AWS', level: 'Proficient' }
+      { name: 'MongoDB', level: 'Proficient' },
+      { name: 'MySQL', level: 'Proficient' },
+      { name: 'Git & GitHub', level: 'Proficient' },
+      { name: 'Node.js', level: 'Intermediate' },
+      { name: 'Express.js', level: 'Intermediate' },
+      { name: 'Postman / REST APIs', level: 'Intermediate' }
     ]
   },
   {
-    id: 'devops-tools',
-    category: 'Engineering Tools & Workflows',
+    id: 'hardware-softskills',
+    category: 'IoT, Security & Soft Skills',
     iconName: 'Sliders',
-    description: 'Version control, testing suites, CI/CD pipelines, and design tooling.',
+    description: 'Hardware microcontrollers, cyber safety awareness drives, and interpersonal competencies.',
     skills: [
-      { name: 'Git & GitHub Workflows', level: 'Expert' },
-      { name: 'Linux / Bash Scripting', level: 'Proficient' },
-      { name: 'Postman / API Testing', level: 'Advanced' },
-      { name: 'Vite / Webpack / Esbuild', level: 'Advanced' },
-      { name: 'Figma UI/UX Prototyping', level: 'Advanced' },
-      { name: 'System Design Principles', level: 'Proficient' }
+      { name: 'ESP32 & IoT Hardware', level: 'Proficient' },
+      { name: 'Cyber Safety & Hygiene Drive', level: 'Advanced' },
+      { name: 'Problem Solving', level: 'Advanced' },
+      { name: 'Team Collaboration', level: 'Advanced' },
+      { name: 'Time Management', level: 'Advanced' },
+      { name: 'Adaptability', level: 'Advanced' }
     ]
   }
 ];
 
 export const PROJECTS_DATA: Project[] = [
   {
-    id: 'cosmic-webgl-portal',
+    id: 'premium-restaurant-platform',
     number: '01',
-    title: 'AETHERIA 3D PORTAL',
-    subtitle: 'High-Performance Spatial Portfolio with Real-Time WebGL Shaders',
-    category: 'Full-Stack & Computer Graphics',
-    year: '2026',
-    client: 'Personal Engineering Showcase',
-    role: 'Full-Stack Developer & Graphics Engineer',
-    summary: 'A locked 60 FPS interactive 3D WebGL cosmos built with custom ACES filmic tone mapping, particle shatter physics, and responsive typography.',
-    description: 'Designed and built from scratch as a spatial computing showcase. Integrates custom GLSL shaders, inertial mouse/touch momentum drag physics, dynamic starburst particle systems, and modular TypeScript components.',
-    liveUrl: 'https://ais-dev-jvmyydhlodstfpe4aiv5gz-309930845476.asia-east1.run.app',
-    githubUrl: 'https://github.com/adarshchaudhary/cosmic-3d-portfolio',
+    title: 'PREMIUM RESTAURANT ORDERING & MANAGEMENT PLATFORM',
+    subtitle: 'Full-Stack Restaurant Ecosystem with Dual Interfaces, RBAC & 3D Food Model Rendering',
+    category: 'Full-Stack Web Development',
+    year: 'May 2026 - June 2026',
+    client: 'Full-Stack Academic & Portfolio Project',
+    role: 'Full-Stack Developer',
+    summary: 'Architected a full-stack restaurant ordering & management platform featuring dual interfaces for customers and restaurant admins.',
+    description: 'Engineered a complete restaurant management platform with customer ordering/cart/checkout workflows and an admin portal (menu CRUD, order tracking, revenue analytics). Developed 35+ REST APIs and 20+ Mongoose schemas with Node.js, Express, and MongoDB. Implemented RBAC with JWT (Access/Refresh tokens) and Google OAuth 2.0. Built an interactive frontend using React 19, Vite, Tailwind CSS, Framer Motion, and 3D food model rendering via React Three Fiber. Integrated Razorpay payment gateway, Cloudinary image pipelines, and automated invoice generation.',
+    liveUrl: 'https://restaurant-app-sample.vercel.app', // Sample URL - Edit with your live project link
+    githubUrl: 'https://github.com/Adarsh234Chaudhary/restaurant-ordering-platform', // Sample URL - Edit with your GitHub repo link
     metrics: [
-      { label: 'Render Performance', value: 'Locked 60 FPS' },
-      { label: 'Particle Count', value: '7,000+ Stars' },
-      { label: 'Shader Architecture', value: 'GLSL + ACES Tone' },
-      { label: 'Lighthouse Score', value: '98/100' }
+      { label: 'REST APIs', value: '35+ Endpoints' },
+      { label: 'Mongoose Schemas', value: '20+ Models' },
+      { label: '3D Graphics', value: 'React Three Fiber' },
+      { label: 'Authentication', value: 'JWT + Google OAuth' }
     ],
     deliverables: [
-      'Interactive 3D WebGL Obsidian Engine',
-      'Reactive Touch & Drag Inertia Physics',
-      'Modular Portfolio Section Hierarchy',
-      'Audio Synthesizer Feedback Subsystem'
+      'Customer Ordering, Cart & Live Checkout Interface',
+      'Admin CRUD Menu Management & Revenue Dashboard',
+      'Razorpay Payment Gateway & Automated Invoice System',
+      'React Three Fiber Interactive 3D Food Model Viewer'
     ],
-    techStack: ['React', 'TypeScript', 'Three.js', 'Tailwind CSS', 'Web Audio API', 'Vite'],
+    techStack: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'Tailwind CSS', 'TypeScript', 'Three.js', 'Cloudinary API', 'Razorpay API', 'JWT', 'Google OAuth 2.0'],
     colorAccent: '#f6c344',
     frameTarget: 42,
     features: [
       {
-        title: 'ACES Filmic Tone Mapping',
-        description: 'Physical studio environment reflections with custom amber bronze key lighting and cool silver metallic rims.'
+        title: 'Dual Interface & RBAC Security',
+        description: 'Enforced role-based access control protecting admin endpoints (menu CRUD, order tracking, revenue analytics) alongside customer checkout flows.'
       },
       {
-        title: 'Cosmic Starburst Transition',
-        description: 'Scroll-driven zoom-to-shatter particle transformation propagating 7,000+ stars into deep space.'
+        title: '3D Food Model Canvas',
+        description: 'Interactive spatial food visualization built with React Three Fiber to allow customers to preview menu items in 3D.'
       },
       {
-        title: 'Zero Latency Audio Haptics',
-        description: 'Web Audio API procedural sound synthesizer delivering instantaneous audio feedback on user actions.'
+        title: 'Payment Gateway & Cloud Pipelines',
+        description: 'Integrated Razorpay transaction validation, Cloudinary image upload workflows, and automated PDF invoice generation.'
       }
     ]
   },
   {
-    id: 'nexus-distributed-compiler',
+    id: 'iot-lpg-leak-detector',
     number: '02',
-    title: 'NEXUS CLOUD IDE & RUNTIME',
-    subtitle: 'Collaborative Real-Time Code Execution Engine & MicroVM Sandbox',
-    category: 'Distributed Systems & Cloud',
-    year: '2025',
-    client: 'Open Source Initiative',
-    role: 'Lead Systems Architect & Backend Developer',
-    summary: 'A low-latency browser-based IDE and containerized multi-language code runner supporting live collaboration via WebSockets.',
-    description: 'Engineered a sandboxed code execution pipeline that isolates tenant workloads inside ephemeral Docker containers. Features real-time AST syntax analysis, multiplayer cursor syncing over CRDTs, and low-latency terminal streaming.',
-    liveUrl: 'https://nexus-ide-demo.example.com',
-    githubUrl: 'https://github.com/adarshchaudhary/nexus-cloud-runtime',
+    title: 'IOT LPG LEAK DETECTOR SYSTEM',
+    subtitle: 'ESP32-Based Safety System with Real-Time Web Dashboard, Auto Valve Shutoff & SMTP Alerts',
+    category: 'IoT & Embedded Systems',
+    year: 'Jan 2026 - April 2026',
+    client: 'IoT Hardware Engineering Project',
+    role: 'Embedded Hardware Developer',
+    summary: 'Developed an ESP32-based gas detection system with live web dashboard monitoring, servo shutoff valve, relay exhaust fan, and email alerts.',
+    description: 'Built an ESP32-based IoT LPG leak detection system utilizing an MQ-series gas sensor for continuous safety monitoring. Developed a responsive web dashboard using HTML, CSS, JavaScript, ESPAsyncWebServer, and ArduinoJson for live status visualization. Implemented configurable gas thresholds, automatic LPG valve shutoff via servo motor, and exhaust fan activation via relay during leak conditions. Configured visual/aural alerts (blinking red RGB LED + buzzer) and non-blocking SMTP email notifications with a 5-minute cooldown.',
+    liveUrl: 'https://iot-lpg-dashboard-sample.vercel.app', // Sample URL - Edit with your live demo link
+    githubUrl: 'https://github.com/Adarsh234Chaudhary/iot-lpg-leak-detector', // Sample URL - Edit with your GitHub repo link
     metrics: [
-      { label: 'Execution Latency', value: '< 180ms Cold Start' },
-      { label: 'Supported Runtimes', value: '8 Languages' },
-      { label: 'Concurrent WebSockets', value: '10k+ Sessions' },
-      { label: 'Test Coverage', value: '94% Unit + E2E' }
+      { label: 'Gas Sensor', value: 'MQ-Series LPG' },
+      { label: 'Auto Interventions', value: 'Servo + Relay' },
+      { label: 'Web Server', value: 'ESPAsyncWebServer' },
+      { label: 'Alert Cooldown', value: '5-Min Cooldown' }
     ],
     deliverables: [
-      'Dockerized MicroVM Sandbox Dispatcher',
-      'Monaco Editor Custom LSP Extension',
-      'CRDT Multiplayer State Sync Engine',
-      'Role-Based Auth & Session Storage'
+      'ESP32 C/C++ Hardware Firmware & Logic',
+      'Embedded HTML/CSS/JS Responsive Status Dashboard',
+      'Automated Servo Valve & Relay Fan Hardware Control',
+      'Non-Blocking SMTP Email Notification Pipeline'
     ],
-    techStack: ['Node.js', 'Go / Docker', 'WebSockets', 'React', 'Redis', 'PostgreSQL'],
+    techStack: ['ESP32', 'C/C++', 'MQ Gas Sensor', 'HTML', 'CSS', 'JavaScript', 'ESPAsyncWebServer', 'ArduinoJson', 'Servo Motor', 'Relay', 'SMTP Email'],
     colorAccent: '#38bdf8',
     frameTarget: 68,
     features: [
       {
-        title: 'Ephemeral Container Sandboxing',
-        description: 'Hardened cgroups and memory quotas preventing security privilege escalation during code compilation.'
+        title: 'Automated Hardware Emergency Intervention',
+        description: 'Triggers instant servo motor valve closure and relay-driven exhaust fan activation when gas threshold is exceeded.'
       },
       {
-        title: 'Real-time CRDT Document Sync',
-        description: 'Conflict-free replicated data types ensuring zero collision during concurrent multi-developer code editing.'
+        title: 'Embedded Web Dashboard',
+        description: 'Hosted directly on the ESP32 via ESPAsyncWebServer for local Wi-Fi monitoring and remote manual override.'
       },
       {
-        title: 'Integrated Terminal Streaming',
-        description: 'Full xterm.js PTY bidirectional pipe streaming standard output and error in real-time.'
+        title: 'Non-Blocking SMTP Alert System',
+        description: 'Dispatches automated email notifications containing gas level, timestamp, IP address, and status with 5-minute anti-spam cooldown.'
       }
     ]
   },
   {
-    id: 'synapse-ai-vision',
+    id: 'wns-cyber-safety-cdp',
     number: '03',
-    title: 'SYNAPSE AI VISION ANALYTICS',
-    subtitle: 'Edge Computer Vision & Real-Time Object Telemetry Dashboard',
-    category: 'Artificial Intelligence & Computer Vision',
-    year: '2025',
-    client: 'Autonomous Research Lab',
-    role: 'Computer Vision & Full-Stack Developer',
-    summary: 'Real-time edge video inference pipeline detecting, tracking, and graphing spatio-temporal trajectories with sub-30ms inference.',
-    description: 'Built a deep learning vision pipeline integrating YOLOv8 and TensorRT for real-time video stream ingestion. Outputs spatio-temporal heatmaps, anomaly detection alerts, and dynamic visual telemetry over a sleek dark-mode analytical dashboard.',
-    liveUrl: 'https://synapse-vision-demo.example.com',
-    githubUrl: 'https://github.com/adarshchaudhary/synapse-ai-vision',
+    title: 'COMMUNITY CYBER SAFETY & DIGITAL LITERACY DRIVE',
+    subtitle: 'WNS Cares Foundation (WCF) Collaborative Social Impact Project Educating 40 Community Learners',
+    category: 'Social Impact & Cyber Security',
+    year: '2026',
+    client: 'WNS Cares Foundation (WCF) & Lovely Professional University',
+    role: 'Community Project Lead & Student Facilitator',
+    summary: 'Led a community development project addressing digital literacy and cyber safety for 40 participants across different age groups.',
+    description: 'Collaborated with WNS Cares Foundation (WCF) to combat digital illiteracy, phishing scams, OTP frauds, and data privacy threats. Conducted hands-on sessions for 40 learners—ranging from primary school children to university students and community elders. Guided participants through WCF CyberSmart e-learning video modules, conducted interactive practical scenarios (identifying phishing links, setting strong passwords, securing accounts), facilitated assessments, and issued official unique certificates.',
+    liveUrl: 'https://cybersmart.wnscaresfoundation.org', // Sample URL - Edit with your certificate/organization link
+    githubUrl: 'https://github.com/Adarsh234Chaudhary/cdp-cyber-safety-drive', // Sample URL - Edit with your project report/slides link
     metrics: [
-      { label: 'Inference Speed', value: '32 FPS @ 1080p' },
-      { label: 'Model Accuracy', value: '91.8% mAP@50' },
-      { label: 'Data Ingestion', value: 'RTSP / WebRTC' },
-      { label: 'Telemetry Graphs', value: 'D3.js Realtime' }
+      { label: 'Learners Educated', value: '40 Certified' },
+      { label: 'Completion Rate', value: '100% Passed' },
+      { label: 'Age Group Diversity', value: 'Kids to Elders' },
+      { label: 'Reference IDs Tracked', value: '40 Certificates' }
     ],
     deliverables: [
-      'TensorRT Optimized Inference Pipeline',
-      'WebRTC Video Stream Relay Server',
-      'Analytical Trajectory Heatmap Canvas',
-      'Alerting & Anomaly Notification Webhook'
+      '11-Phase Structured Community Learning Framework',
+      'WCF CyberSmart Video Guidance & Practical Sessions',
+      'Bilingual (Hindi/English) Glossary Cards & Visual Posters',
+      'Complete Certificate Excel Register & Geo-Tagged Documentation'
     ],
-    techStack: ['Python / PyTorch', 'FastAPI', 'OpenCV', 'React', 'D3.js', 'Docker'],
+    techStack: ['WCF CyberSmart Portal', 'Digital Literacy', 'Cyber Hygiene', 'Phishing Awareness', 'Community Outreach', 'Documentation'],
     colorAccent: '#34d399',
     frameTarget: 95,
     features: [
       {
-        title: 'Optimized TensorRT Execution',
-        description: 'Quantized INT8 inference running on edge GPUs delivering ultra-low inference latency.'
+        title: '100% Certified Learner Outcome',
+        description: 'Empowered 40 diverse individuals to successfully finish CyberSmart modules, clear assessments, and obtain digital certificates.'
       },
       {
-        title: 'Live WebRTC Video Stream Ingestion',
-        description: 'Zero-buffer peer-to-peer video streaming feeding bounding box predictions straight to the canvas.'
+        title: 'Practical Cyber Safety Training',
+        description: 'Educated learners on identifying phishing messages, protecting OTPs, creating robust passwords, and avoiding online scams.'
       },
       {
-        title: 'D3 Spatio-Temporal Trajectory Graphs',
-        description: 'Interactive analytical charts tracking object velocities, zone counts, and temporal density heatmaps.'
-      }
-    ]
-  },
-  {
-    id: 'hyperion-fintech',
-    number: '04',
-    title: 'HYPERION CRYPTO & ASSET OS',
-    subtitle: 'High-Throughput Algorithmic Trading Analytics & Orderbook Visualizer',
-    category: 'Fintech & Systems Engineering',
-    year: '2024',
-    client: 'Quantitative Systems Project',
-    role: 'Full-Stack Systems Engineer',
-    summary: 'A sub-millisecond Level-2 orderbook visualizer and algorithmic backtesting engine streaming live tick data across global exchanges.',
-    description: 'Built a high-frequency financial dashboard processing 50,000+ ticks/sec via memory-mapped circular ring buffers. Features depth chart visualization, automated MACD/RSI strategy backtesting, and automated risk threshold alerts.',
-    liveUrl: 'https://hyperion-terminal.example.com',
-    githubUrl: 'https://github.com/adarshchaudhary/hyperion-orderbook-os',
-    metrics: [
-      { label: 'Throughput', value: '50k Ticks / Sec' },
-      { label: 'UI Refresh', value: 'Locked 60 FPS' },
-      { label: 'Ring Buffer', value: 'Zero Allocation' },
-      { label: 'Backtest Engine', value: 'Vectorized Numpy' }
-    ],
-    deliverables: [
-      'Level-2 Real-Time Orderbook Depth Chart',
-      'WebSocket Market Feed Aggregator',
-      'Vectorized Strategy Backtesting Suite',
-      'Exportable Trade Execution Ledger'
-    ],
-    techStack: ['TypeScript', 'Node.js', 'Python', 'WebGL / Canvas', 'PostgreSQL', 'Redis'],
-    colorAccent: '#a855f7',
-    frameTarget: 114,
-    features: [
-      {
-        title: 'Real-Time Orderbook Depth Canvas',
-        description: 'Hardware-accelerated visual depth chart updating 60 times per second with bid-ask spread heatmaps.'
-      },
-      {
-        title: 'Vectorized Strategy Backtester',
-        description: 'Simulates historical market conditions with slippage models to evaluate Sharpe ratio and max drawdown.'
-      },
-      {
-        title: 'Zero Garbage Collector Spikes',
-        description: 'ArrayBuffer pooling and typed arrays preventing frame drops during high-volatility tick floods.'
+        title: 'Bilingual Educational Materials',
+        description: 'Distributed glossary cards with common cyber terms in Hindi and English alongside visual posters for lasting impact.'
       }
     ]
   }
@@ -283,109 +240,150 @@ export const PROJECTS_DATA: Project[] = [
 
 export const ACHIEVEMENTS_DATA: Certificate[] = [
   {
-    id: 'cert-aws-cloud',
+    id: 'cert-wns-cybersmart',
     number: '01',
-    title: 'AWS Certified Cloud Practitioner / Solutions',
-    issuer: 'Amazon Web Services (AWS)',
-    issueDate: '2025',
-    credentialId: 'AWS-CERT-98234710',
-    verificationUrl: 'https://aws.amazon.com/verification',
-    certificateImage: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80',
-    badgeColor: '#f59e0b',
-    category: 'Cloud Architecture & DevOps',
-    skillsCovered: ['Cloud Infrastructure', 'EC2 & S3', 'Serverless Lambda', 'IAM & Cloud Security', 'VPC Networking'],
-    description: 'Demonstrated deep foundational knowledge of AWS cloud services, high-availability architecture design, and cost optimization methodologies.'
+    title: 'Cyber Safety & Digital Literacy Facilitator Certificate',
+    issuer: 'WNS Cares Foundation (WCF) & LPU',
+    issueDate: '2026',
+    credentialId: ' ADAINDUTT6050DFSONOTH', // Sample ID - Edit with your actual certificate ID
+    certificateImage: 'https://lh3.googleusercontent.com/d/12xqAGKNMhpPP8uoMb2CowxXFQGMVMYv0',
+    badgeColor: '#34d399',
+    category: 'Community Impact & Cyber Safety',
+    skillsCovered: ['Cyber Hygiene', 'Phishing Prevention', 'Digital Literacy', 'Community Leadership', 'Data Privacy'],
+    description: 'Awarded for conducting a 40-learner cyber safety awareness drive in collaboration with WNS Cares Foundation, empowering community members with online safety skills.'
   },
   {
-    id: 'cert-meta-fullstack',
+    id: 'cert-gfg-cpp',
     number: '02',
-    title: 'Meta Full-Stack Software Engineer Professional',
-    issuer: 'Meta / Coursera',
-    issueDate: '2025',
-    credentialId: 'META-FS-84920193',
-    verificationUrl: 'https://www.coursera.org/verify/professional-cert/meta',
-    certificateImage: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80',
-    badgeColor: '#0ea5e9',
-    category: 'Full-Stack Software Engineering',
-    skillsCovered: ['React & Advanced State', 'Django & Python Backend', 'Relational Databases & SQL', 'API Architecture', 'CI/CD & Testing'],
-    description: 'Comprehensive 9-course professional specialization covering modern frontend engineering, relational database schema design, and production deployment.'
+    title: 'C++ Skill Up Certification',
+    issuer: 'GeeksforGeeks',
+    issueDate: 'June 2026',
+    credentialId: 'GFG-CPP-SKILLUP-2026-SAMPLE', // Sample ID - Edit with your actual certificate ID
+    certificateImage: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=80',
+    badgeColor: '#f59e0b',
+    category: 'Programming Languages',
+    skillsCovered: ['C++ Fundamentals', 'Object-Oriented Programming', 'Pointers & Memory', 'Data Structures', 'Problem Solving'],
+    description: 'Successfully completed the GFG C++ Skill Up certification validating proficiency in C++ syntax, object-oriented concepts, memory management, and data structures.'
   },
   {
-    id: 'cert-dsa-leetcode',
+    id: 'cert-iamneo-programming',
     number: '03',
-    title: 'Data Structures & Algorithms Mastery Specialization',
-    issuer: 'Computer Science Department / UCSD',
-    issueDate: '2024',
-    credentialId: 'UCSD-DSA-77491028',
-    verificationUrl: 'https://coursera.org/verify/dsa-specialization',
-    certificateImage: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80',
-    badgeColor: '#10b981',
-    category: 'Algorithms & Computational Complexity',
-    skillsCovered: ['Dynamic Programming', 'Graph Algorithms', 'Trees & Heaps', 'Asymptotic Big-O Analysis', 'NP-Completeness'],
-    description: 'Rigorous algorithmic problem solving covering graph theory, network flows, string algorithms, and dynamic programming optimization.'
+    title: 'Certificate in Computer Programming (150 Hours Course)',
+    issuer: 'iamNeo',
+    issueDate: 'May 2026',
+    credentialId: 'IAMNEO-CP150-2026-SAMPLE', // Sample ID - Edit with your actual certificate ID
+    certificateImage: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80',
+    badgeColor: '#38bdf8',
+    category: 'Software Engineering',
+    skillsCovered: ['Algorithmic Logic', 'Data Structures', 'C / C++ Programming', 'Code Optimization', 'Hands-on Coding'],
+    description: 'Completed an intensive 150-hour computer programming course covering foundational algorithms, problem-solving techniques, and coding practice.'
   },
   {
-    id: 'cert-hackathon-winner',
+    id: 'cert-infosys-ml-python',
     number: '04',
-    title: '1st Place Winner — National Web3 & AI Hackathon',
-    issuer: 'National Innovation Council & IEEE',
-    issueDate: '2025',
-    credentialId: 'IEEE-HACK-WINNER-2025',
-    verificationUrl: 'https://ieee.org/hackathon-awards',
-    certificateImage: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80',
+    title: 'Explore Machine Learning using Python',
+    issuer: 'Infosys Springboard',
+    issueDate: 'Mar 2026',
+    credentialId: 'INFYS-ML-PY-2026-SAMPLE', // Sample ID - Edit with your actual certificate ID
+    certificateImage: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80',
+    badgeColor: '#a855f7',
+    category: 'Artificial Intelligence & Data Science',
+    skillsCovered: ['Python for Data Science', 'NumPy & Pandas', 'Supervised Learning', 'Scikit-Learn', 'Data Preprocessing'],
+    description: 'Gained foundational knowledge in Machine Learning algorithms, data analysis, and predictive modeling using Python and Scikit-Learn.'
+  },
+  {
+    id: 'cert-gfg-c',
+    number: '05',
+    title: 'C Skill Up Certification',
+    issuer: 'GeeksforGeeks',
+    issueDate: 'Feb 2026',
+    credentialId: 'GFG-C-SKILLUP-2026-SAMPLE', // Sample ID - Edit with your actual certificate ID
+    certificateImage: 'https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=1200&q=80',
     badgeColor: '#ec4899',
-    category: 'Hackathon Award & Innovation',
-    skillsCovered: ['Rapid Prototyping', 'Generative AI Pipelines', 'Smart Contracts', 'Team Leadership', 'Pitch & Demo'],
-    description: 'Awarded First Place out of 180+ competitive engineering teams for developing an automated autonomous disaster triage agent powered by edge computer vision.'
+    category: 'Core Programming',
+    skillsCovered: ['C Fundamentals', 'Pointers & Dynamic Memory', 'Structures', 'File Handling', 'Logic Building'],
+    description: 'Certified in C programming fundamentals, procedural logic, array manipulations, and dynamic memory allocations.'
+  },
+  {
+    id: 'achievement-actopia-3rd',
+    number: '06',
+    title: '3rd Position — Actopia Role Play Competition',
+    issuer: 'University Competition',
+    issueDate: '2026',
+    credentialId: 'ACTOPIA-3RD-POS-2026',
+    certificateImage: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80',
+    badgeColor: '#eab308',
+    category: 'Extracurricular Achievement',
+    skillsCovered: ['Public Speaking', 'Role Play', 'Creative Expression', 'Team Collaboration', 'Communication'],
+    description: 'Achieved 3rd position in Actopia, a university-level role play competition demonstrating strong creative performance, teamwork, and presentation skills.'
   }
 ];
 
 export const EDUCATION_DATA: EducationItem[] = [
   {
-    id: 'btech-cse',
+    id: 'btech-cse-lpu',
     number: '01',
     degree: 'Bachelor of Technology (B.Tech)',
-    major: 'Computer Science & Engineering',
-    institution: 'National Institute of Technology / Engineering University',
-    location: 'India',
-    period: '2022 – 2026 (Expected)',
-    gpa: '8.8 / 10.0 CGPA',
-    status: 'Final Year Undergraduate',
+    major: 'Computer Science and Engineering',
+    institution: 'Lovely Professional University',
+    location: 'Phagwara, Punjab, India',
+    period: 'Aug 2024 – Present (2nd Year)',
+    gpa: 'Pursuing (2nd Year)',
+    status: '2nd Year Undergraduate',
     coursework: [
       'Data Structures & Algorithms',
-      'Operating Systems & Kernel Concepts',
-      'Database Management Systems (DBMS)',
-      'Computer Networks & Protocols',
-      'Object-Oriented Software Engineering',
-      'Compiler Design & Automata Theory',
-      'Computer Graphics & Web Technologies',
-      'Distributed Systems & Cloud Computing'
+      'Object-Oriented Programming (C++ / Python)',
+      'Database Management Systems (MySQL / MongoDB)',
+      'Web Technologies (HTML, CSS, JavaScript, React)',
+      'Computer Networks & Operating Systems',
+      'IoT & Microcontroller Systems'
     ],
     highlights: [
-      'Dean\'s List / Academic Excellence Award for Top 5% standing in CSE cohort',
-      'Lead Technical Coordinator for Annual Engineering Symposium & Hackathon',
-      'Published research paper preprint on Real-Time WebGL Shader Optimization'
+      '2nd-year CSE student building full-stack web platforms and IoT hardware devices',
+      'Collaborated with WNS Cares Foundation to lead CyberSmart drive educating 40 learners',
+      'Achieved 3rd position in Actopia university role play competition'
     ]
   },
   {
-    id: 'higher-secondary',
+    id: 'higher-secondary-ms',
     number: '02',
-    degree: 'Higher Secondary School Certificate (Class XII)',
-    major: 'Science Stream (Physics, Chemistry, Mathematics & Computer Science)',
-    institution: 'Senior Secondary Academy',
-    location: 'India',
-    period: '2020 – 2022',
-    gpa: '94.6% Distinction',
-    status: 'Completed with Honors',
+    degree: 'Higher Secondary Education (Class XII)',
+    major: 'Science Stream (Physics, Chemistry, Mathematics & CS)',
+    institution: 'M S Senior Secondary Public School',
+    location: 'Amroha, Uttar Pradesh, India',
+    period: 'May 2024 – Mar 2025',
+    gpa: 'Completed',
+    status: 'Higher Secondary Certificate',
     coursework: [
-      'Advanced Mathematics & Calculus',
-      'Physics & Classical Mechanics',
-      'Computer Science (C++ & Python OOP)',
-      'Linear Algebra & Statistics'
+      'Physics & Mechanics',
+      'Chemistry',
+      'Advanced Mathematics',
+      'Computer Science Fundamentals'
     ],
     highlights: [
-      'School Topper in Computer Science & Mathematics Olympiad',
-      'Qualified National Level Engineering Entrance Examination (JEE) in top 1.5 percentile'
+      'Developed strong analytical and computational foundations in mathematics and science',
+      'Participated in school technical activities and academic exhibitions'
+    ]
+  },
+  {
+    id: 'secondary-ms',
+    number: '03',
+    degree: 'Secondary Education (Class X)',
+    major: 'General Science & Mathematics',
+    institution: 'M S Senior Secondary Public School',
+    location: 'Amroha, Uttar Pradesh, India',
+    period: 'Jun 2023 – Mar 2024',
+    gpa: 'Completed',
+    status: 'Secondary Education Certificate',
+    coursework: [
+      'Mathematics',
+      'General Science',
+      'Social Sciences',
+      'English & Languages'
+    ],
+    highlights: [
+      'Actively participated in school academic events and extracurricular competitions'
     ]
   }
 ];
+

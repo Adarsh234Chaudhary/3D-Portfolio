@@ -152,6 +152,7 @@ export default function App() {
       {/* 8. Section 06: Education & Academic Rigor */}
       <EducationOverlay
         scrollProgress={scrollProgress}
+        onNavigate={scrollToFraction}
       />
 
       {/* 9. Section 07: Contact Terminal */}

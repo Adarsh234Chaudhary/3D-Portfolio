@@ -1,8 +1,9 @@
 import React from 'react';
 import { ACHIEVEMENTS_DATA } from '../data/portfolio';
 import { Certificate } from '../types';
-import { Award, ExternalLink, ShieldCheck, Eye, Sparkles, CheckCircle2 } from 'lucide-react';
+import { Award, ExternalLink, Eye, Sparkles, CheckCircle2 } from 'lucide-react';
 import { sound } from '../utils/audio';
+import { formatImageUrl } from '../utils/image';
 
 interface AchievementsOverlayProps {
   scrollProgress: number;
@@ -63,7 +64,7 @@ export const AchievementsOverlay: React.FC<AchievementsOverlayProps> = ({
           PROVEN CREDENTIALS &amp; <span className="font-medium text-transparent bg-clip-text bg-gradient-to-r from-[#f6c344] via-white to-[#34d399]">AWARDS</span>
         </h2>
         <p className="text-xs sm:text-sm text-white/60 font-light mt-2 max-w-lg mx-auto">
-          Click any certificate card below to inspect full verification details, credentials, and certified technical competencies.
+          Click any certificate card below to inspect full credential details and certified technical competencies.
         </p>
       </div>
 
@@ -83,7 +84,7 @@ export const AchievementsOverlay: React.FC<AchievementsOverlayProps> = ({
               {/* Visible Certificate Preview Thumbnail */}
               <div className="relative w-24 sm:w-28 h-20 sm:h-22 rounded-xl overflow-hidden border border-white/20 bg-black/80 shrink-0 group-hover:shadow-[0_0_20px_rgba(246,195,68,0.3)] transition-all">
                 <img
-                  src={cert.certificateImage}
+                  src={formatImageUrl(cert.certificateImage)}
                   alt={cert.title}
                   className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
                 />
@@ -108,7 +109,7 @@ export const AchievementsOverlay: React.FC<AchievementsOverlayProps> = ({
                   {cert.title}
                 </h3>
                 <span className="inline-block font-mono text-[9px] uppercase tracking-wider text-emerald-400 mt-1">
-                  ✓ VERIFIED CREDENTIAL
+                  ✓ EARNED CREDENTIAL
                 </span>
               </div>
             </div>
