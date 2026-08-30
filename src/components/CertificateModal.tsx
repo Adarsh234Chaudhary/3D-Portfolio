@@ -2,7 +2,7 @@ import React from 'react';
 import { X, Award, CheckCircle2, Download, Copy, Check } from 'lucide-react';
 import { Certificate } from '../types';
 import { sound } from '../utils/audio';
-import { formatImageUrl } from '../utils/image';
+import { formatImageUrl, handleImageFallback } from '../utils/image';
 
 interface CertificateModalProps {
   certificate: Certificate | null;
@@ -72,6 +72,7 @@ export const CertificateModal: React.FC<CertificateModalProps> = ({ certificate,
           <img
             src={formatImageUrl(certificate.certificateImage)}
             alt={certificate.title}
+            onError={(e) => handleImageFallback(e)}
             className="w-full max-h-[380px] object-cover object-center group-hover:scale-[1.02] transition-transform duration-500"
           />
 

@@ -7,6 +7,7 @@ import React from 'react';
 import { Github, Linkedin, FileText } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolio';
 import { sound } from '../utils/audio';
+import { formatImageUrl, handleImageFallback } from '../utils/image';
 
 interface HeroOverlayProps {
   scrollProgress: number;
@@ -155,8 +156,9 @@ export function HeroOverlay({ scrollProgress, onExploreClick, onNavigate, onOpen
           <div className="relative w-28 h-28 sm:w-44 sm:h-44 md:w-56 md:h-56 lg:w-72 lg:h-72 xl:w-92 xl:h-92 aspect-square rounded-full p-1.5 sm:p-2.5 lg:p-3 bg-gradient-to-b from-white/30 via-[#181a20]/90 to-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.8)] backdrop-blur-xl transition-all duration-300">
             <div className="w-full h-full rounded-full overflow-hidden relative bg-[#090a0f] border border-white/20 shadow-inner">
               <img
-                src={PERSONAL_INFO.avatarUrl}
+                src={formatImageUrl(PERSONAL_INFO.avatarUrl)}
                 alt={PERSONAL_INFO.name}
+                onError={(e) => handleImageFallback(e)}
                 className="w-full h-full object-cover object-center"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent pointer-events-none" />

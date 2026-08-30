@@ -3,7 +3,7 @@ import { ACHIEVEMENTS_DATA } from '../data/portfolio';
 import { Certificate } from '../types';
 import { Award, ExternalLink, Eye, Sparkles, CheckCircle2 } from 'lucide-react';
 import { sound } from '../utils/audio';
-import { formatImageUrl } from '../utils/image';
+import { formatImageUrl, handleImageFallback } from '../utils/image';
 
 interface AchievementsOverlayProps {
   scrollProgress: number;
@@ -86,6 +86,7 @@ export const AchievementsOverlay: React.FC<AchievementsOverlayProps> = ({
                 <img
                   src={formatImageUrl(cert.certificateImage)}
                   alt={cert.title}
+                  onError={(e) => handleImageFallback(e)}
                   className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors flex items-center justify-center">

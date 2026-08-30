@@ -5,12 +5,12 @@ export const PERSONAL_INFO: PersonalInfo = {
   title: 'Computer Science & Engineering Student (2nd Year)',
   subtitle: 'Full-Stack Developer • IoT Systems Enthusiast • Cyber Safety Advocate',
   bio: '2nd-year CSE undergraduate at Lovely Professional University passionate about building scalable full-stack web applications, embedded IoT safety hardware, and driving community digital literacy & cybersecurity awareness.',
-  email: 'adarshchaudhary.dev@gmail.com',
+  email: 'aachaudhary234@gmail.com',
   location: 'Phagwara, Punjab / Amroha, UP, India',
   githubUrl: 'https://github.com/Adarsh234Chaudhary', // Sample URL - Edit with your GitHub link
-  linkedinUrl: 'https://linkedin.com/in/your-linkedin-profile', // Sample URL - Edit with your LinkedIn link
-  cvUrl: 'https://drive.google.com/file/d/your_drive_cv_id/view?usp=sharing', // Sample URL - Edit with your CV link
-  avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80'
+  linkedinUrl: 'https://www.linkedin.com/in/adarsh-chaudhary-565771393/', // Sample URL - Edit with your LinkedIn link
+  cvUrl: 'https://drive.google.com/file/d/1pvOZaJT8rUBsK8MSm5bzU00kT4LjGzIb/view?usp=sharing', // Sample URL - Edit with your CV link
+  avatarUrl: '/profile/avatar.jpeg'
 };
 
 export const ABOUT_DATA = {
@@ -118,8 +118,8 @@ export const PROJECTS_DATA: Project[] = [
     role: 'Full-Stack Developer',
     summary: 'Architected a full-stack restaurant ordering & management platform featuring dual interfaces for customers and restaurant admins.',
     description: 'Engineered a complete restaurant management platform with customer ordering/cart/checkout workflows and an admin portal (menu CRUD, order tracking, revenue analytics). Developed 35+ REST APIs and 20+ Mongoose schemas with Node.js, Express, and MongoDB. Implemented RBAC with JWT (Access/Refresh tokens) and Google OAuth 2.0. Built an interactive frontend using React 19, Vite, Tailwind CSS, Framer Motion, and 3D food model rendering via React Three Fiber. Integrated Razorpay payment gateway, Cloudinary image pipelines, and automated invoice generation.',
-    liveUrl: 'https://restaurant-app-sample.vercel.app', // Sample URL - Edit with your live project link
-    githubUrl: 'https://github.com/Adarsh234Chaudhary/restaurant-ordering-platform', // Sample URL - Edit with your GitHub repo link
+    liveUrl: 'https://tasteology-rho.vercel.app/', // Sample URL - Edit with your live project link
+    githubUrl: 'https://github.com/Adarsh234Chaudhary/Tasteology', // Sample URL - Edit with your GitHub repo link
     metrics: [
       { label: 'REST APIs', value: '35+ Endpoints' },
       { label: 'Mongoose Schemas', value: '20+ Models' },
@@ -161,8 +161,8 @@ export const PROJECTS_DATA: Project[] = [
     role: 'Embedded Hardware Developer',
     summary: 'Developed an ESP32-based gas detection system with live web dashboard monitoring, servo shutoff valve, relay exhaust fan, and email alerts.',
     description: 'Built an ESP32-based IoT LPG leak detection system utilizing an MQ-series gas sensor for continuous safety monitoring. Developed a responsive web dashboard using HTML, CSS, JavaScript, ESPAsyncWebServer, and ArduinoJson for live status visualization. Implemented configurable gas thresholds, automatic LPG valve shutoff via servo motor, and exhaust fan activation via relay during leak conditions. Configured visual/aural alerts (blinking red RGB LED + buzzer) and non-blocking SMTP email notifications with a 5-minute cooldown.',
-    liveUrl: 'https://iot-lpg-dashboard-sample.vercel.app', // Sample URL - Edit with your live demo link
-    githubUrl: 'https://github.com/Adarsh234Chaudhary/iot-lpg-leak-detector', // Sample URL - Edit with your GitHub repo link
+    liveUrl: 'https://docs.google.com/presentation/d/1Uo2dx59ywBR73-uXgVd_weOAMXqM_EGS/edit?usp=sharing&ouid=102794603996427190563&rtpof=true&sd=true', // Sample URL - Edit with your live demo link
+    githubUrl: 'https://docs.google.com/presentation/d/1Uo2dx59ywBR73-uXgVd_weOAMXqM_EGS/edit?usp=sharing&ouid=102794603996427190563&rtpof=true&sd=true', // Sample URL - Edit with your GitHub repo link
     metrics: [
       { label: 'Gas Sensor', value: 'MQ-Series LPG' },
       { label: 'Auto Interventions', value: 'Servo + Relay' },
@@ -204,8 +204,8 @@ export const PROJECTS_DATA: Project[] = [
     role: 'Community Project Lead & Student Facilitator',
     summary: 'Led a community development project addressing digital literacy and cyber safety for 40 participants across different age groups.',
     description: 'Collaborated with WNS Cares Foundation (WCF) to combat digital illiteracy, phishing scams, OTP frauds, and data privacy threats. Conducted hands-on sessions for 40 learners—ranging from primary school children to university students and community elders. Guided participants through WCF CyberSmart e-learning video modules, conducted interactive practical scenarios (identifying phishing links, setting strong passwords, securing accounts), facilitated assessments, and issued official unique certificates.',
-    liveUrl: 'https://cybersmart.wnscaresfoundation.org', // Sample URL - Edit with your certificate/organization link
-    githubUrl: 'https://github.com/Adarsh234Chaudhary/cdp-cyber-safety-drive', // Sample URL - Edit with your project report/slides link
+    liveUrl: 'https://drive.google.com/file/d/12xqAGKNMhpPP8uoMb2CowxXFQGMVMYv0/view?usp=sharing', // Sample URL - Edit with your certificate/organization link
+    githubUrl: 'https://drive.google.com/file/d/1u0uxhID1AKEf-gHM952I4jkBup8xrSZy/view?usp=sharing', // Sample URL - Edit with your project report/slides link
     metrics: [
       { label: 'Learners Educated', value: '40 Certified' },
       { label: 'Completion Rate', value: '100% Passed' },
@@ -246,7 +246,7 @@ export const ACHIEVEMENTS_DATA: Certificate[] = [
     issuer: 'WNS Cares Foundation (WCF) & LPU',
     issueDate: '2026',
     credentialId: ' ADAINDUTT6050DFSONOTH', // Sample ID - Edit with your actual certificate ID
-    certificateImage: 'https://lh3.googleusercontent.com/d/12xqAGKNMhpPP8uoMb2CowxXFQGMVMYv0',
+    certificateImage: '/certificates/cert-01-wns-cybersmart.jpg',
     badgeColor: '#34d399',
     category: 'Community Impact & Cyber Safety',
     skillsCovered: ['Cyber Hygiene', 'Phishing Prevention', 'Digital Literacy', 'Community Leadership', 'Data Privacy'],
@@ -259,7 +259,7 @@ export const ACHIEVEMENTS_DATA: Certificate[] = [
     issuer: 'GeeksforGeeks',
     issueDate: 'June 2026',
     credentialId: 'GFG-CPP-SKILLUP-2026-SAMPLE', // Sample ID - Edit with your actual certificate ID
-    certificateImage: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=80',
+    certificateImage: '/certificates/cert-02-gfg-cpp.jpg',
     badgeColor: '#f59e0b',
     category: 'Programming Languages',
     skillsCovered: ['C++ Fundamentals', 'Object-Oriented Programming', 'Pointers & Memory', 'Data Structures', 'Problem Solving'],
@@ -272,7 +272,7 @@ export const ACHIEVEMENTS_DATA: Certificate[] = [
     issuer: 'iamNeo',
     issueDate: 'May 2026',
     credentialId: 'IAMNEO-CP150-2026-SAMPLE', // Sample ID - Edit with your actual certificate ID
-    certificateImage: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80',
+    certificateImage: '/certificates/cert-03-iamneo.jpg',
     badgeColor: '#38bdf8',
     category: 'Software Engineering',
     skillsCovered: ['Algorithmic Logic', 'Data Structures', 'C / C++ Programming', 'Code Optimization', 'Hands-on Coding'],
@@ -285,7 +285,7 @@ export const ACHIEVEMENTS_DATA: Certificate[] = [
     issuer: 'Infosys Springboard',
     issueDate: 'Mar 2026',
     credentialId: 'INFYS-ML-PY-2026-SAMPLE', // Sample ID - Edit with your actual certificate ID
-    certificateImage: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80',
+    certificateImage: '/certificates/cert-04-infosys-ml.jpg',
     badgeColor: '#a855f7',
     category: 'Artificial Intelligence & Data Science',
     skillsCovered: ['Python for Data Science', 'NumPy & Pandas', 'Supervised Learning', 'Scikit-Learn', 'Data Preprocessing'],
@@ -298,7 +298,7 @@ export const ACHIEVEMENTS_DATA: Certificate[] = [
     issuer: 'GeeksforGeeks',
     issueDate: 'Feb 2026',
     credentialId: 'GFG-C-SKILLUP-2026-SAMPLE', // Sample ID - Edit with your actual certificate ID
-    certificateImage: 'https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=1200&q=80',
+    certificateImage: '/certificates/cert-05-gfg-c.jpg',
     badgeColor: '#ec4899',
     category: 'Core Programming',
     skillsCovered: ['C Fundamentals', 'Pointers & Dynamic Memory', 'Structures', 'File Handling', 'Logic Building'],
@@ -311,7 +311,7 @@ export const ACHIEVEMENTS_DATA: Certificate[] = [
     issuer: 'University Competition',
     issueDate: '2026',
     credentialId: 'ACTOPIA-3RD-POS-2026',
-    certificateImage: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80',
+    certificateImage: '/certificates/cert-06-actopia.jpg',
     badgeColor: '#eab308',
     category: 'Extracurricular Achievement',
     skillsCovered: ['Public Speaking', 'Role Play', 'Creative Expression', 'Team Collaboration', 'Communication'],
