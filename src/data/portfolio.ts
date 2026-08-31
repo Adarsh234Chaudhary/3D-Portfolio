@@ -2,9 +2,9 @@ import { Project, SkillCategory, Certificate, EducationItem, PersonalInfo } from
 
 export const PERSONAL_INFO: PersonalInfo = {
   name: 'Adarsh Chaudhary',
-  title: 'Computer Science & Engineering Student (2nd Year)',
-  subtitle: 'Full-Stack Developer • IoT Systems Enthusiast • Cyber Safety Advocate',
-  bio: '2nd-year CSE undergraduate at Lovely Professional University passionate about building scalable full-stack web applications, embedded IoT safety hardware, and driving community digital literacy & cybersecurity awareness.',
+aZq  title: 'Computer Science & Engineering Student (AI & ML Specialization - 2nd Year)',
+  subtitle: 'AI & ML Specialization • Full-Stack Developer • IoT Systems Enthusiast • Cyber Safety Advocate',
+  bio: '2nd-year CSE undergraduate specializing in Artificial Intelligence & Machine Learning at Lovely Professional University. Passionate about machine learning models, scalable full-stack web applications, embedded IoT safety hardware, and driving community digital literacy & cybersecurity awareness.',
   email: 'aachaudhary234@gmail.com',
   location: 'Phagwara, Punjab / Amroha, UP, India',
   githubUrl: 'https://github.com/Adarsh234Chaudhary', // Sample URL - Edit with your GitHub link
@@ -15,39 +15,58 @@ export const PERSONAL_INFO: PersonalInfo = {
 
 export const ABOUT_DATA = {
   sectionNumber: '01',
-  tagline: 'COMPUTER SCIENCE & ENGINEERING (2ND YEAR)',
-  headline: 'BUILDING PRACTICAL SOLUTIONS FROM',
-  headlineAccent: 'FULL-STACK TO IOT & CYBER SAFETY',
-  intro: 'I am a 2nd-year Computer Science & Engineering student at Lovely Professional University, bridging core programming fundamentals (Python, C/C++, JavaScript, React) with real-world full-stack applications, IoT safety systems, and community cybersecurity education.',
+  tagline: 'COMPUTER SCIENCE & ENGINEERING — AI & ML SPECIALIZATION',
+  headline: 'BUILDING INTELLIGENT & PRACTICAL SOLUTIONS FROM',
+  headlineAccent: 'AI & ML TO FULL-STACK & IOT SAFETY',
+  intro: 'I am a 2nd-year Computer Science & Engineering student at Lovely Professional University specializing in Artificial Intelligence & Machine Learning. I bridge machine learning algorithms, core programming fundamentals (Python, C/C++, JavaScript, React), real-world full-stack applications, IoT safety systems, and community cybersecurity education.',
   pillars: [
     {
       number: '01',
+      title: 'AI & Machine Learning',
+      description: 'Foundations in Python data science, machine learning models, supervised learning, data preprocessing, and algorithm optimization.',
+      accent: '#a855f7'
+    },
+    {
+      number: '02',
       title: 'Languages & Algorithms',
       description: 'Strong foundation in Python, C, C++, Data Structures, Algorithms, Object-Oriented Logic, and fundamental problem solving.',
       accent: '#f6c344'
     },
     {
-      number: '02',
+      number: '03',
       title: 'Full-Stack Web Development',
       description: 'Building dual-interface web platforms and REST APIs using React, JavaScript, Node.js, Express.js, MongoDB, and Tailwind CSS.',
       accent: '#38bdf8'
     },
     {
-      number: '03',
+      number: '04',
       title: 'IoT & Cyber Safety Drive',
       description: 'Engineering ESP32 IoT gas leak detection hardware and leading WNS Cares Foundation CyberSmart awareness drives for 40+ community members.',
       accent: '#34d399'
     }
   ],
   stats: [
+    { label: 'Specialization', value: 'AI & Machine Learning' },
     { label: 'Academic Standing', value: '2nd Year B.Tech CSE' },
     { label: 'University', value: 'Lovely Professional Univ' },
-    { label: 'Community Learners', value: '40 Educated' },
-    { label: 'Core Projects', value: '3 Active Projects' }
+    { label: 'Community Learners', value: '40 Educated' }
   ]
 };
 
 export const SKILLS_DATA: SkillCategory[] = [
+  {
+    id: 'ai-machine-learning',
+    category: 'Artificial Intelligence & Machine Learning',
+    iconName: 'Sparkles',
+    description: 'Specialized coursework, machine learning algorithms, data modeling, and AI applications.',
+    skills: [
+      { name: 'Machine Learning', level: 'Intermediate' },
+      { name: 'Supervised Learning', level: 'Intermediate' },
+      { name: 'Data Preprocessing', level: 'Intermediate' },
+      { name: 'Predictive Modeling', level: 'Intermediate' },
+      { name: 'NumPy & Pandas', level: 'Beginner' }
+    ]
+  },
   {
     id: 'core-languages',
     category: 'Languages & Core CS',
@@ -324,13 +343,15 @@ export const EDUCATION_DATA: EducationItem[] = [
     id: 'btech-cse-lpu',
     number: '01',
     degree: 'Bachelor of Technology (B.Tech)',
-    major: 'Computer Science and Engineering',
+    major: 'Computer Science & Engineering (Specialization in AI & ML)',
     institution: 'Lovely Professional University',
     location: 'Phagwara, Punjab, India',
     period: 'Aug 2024 – Present (2nd Year)',
     gpa: 'Pursuing (2nd Year)',
     status: '2nd Year Undergraduate',
     coursework: [
+      'Artificial Intelligence & Machine Learning',
+      'Python for Data Science (NumPy, Pandas, Scikit-Learn)',
       'Data Structures & Algorithms',
       'Object-Oriented Programming (C++ / Python)',
       'Database Management Systems (MySQL / MongoDB)',
@@ -339,9 +360,9 @@ export const EDUCATION_DATA: EducationItem[] = [
       'IoT & Microcontroller Systems'
     ],
     highlights: [
-      '2nd-year CSE student building full-stack web platforms and IoT hardware devices',
-      'Collaborated with WNS Cares Foundation to lead CyberSmart drive educating 40 learners',
-      'Achieved 3rd position in Actopia university role play competition'
+      '2nd-year B.Tech CSE student specializing in Artificial Intelligence & Machine Learning',
+      'Building full-stack web applications, ML models, and ESP32 IoT safety devices',
+      'Collaborated with WNS Cares Foundation to lead CyberSmart drive educating 40 learners'
     ]
   },
   {
