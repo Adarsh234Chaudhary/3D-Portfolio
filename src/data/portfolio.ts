@@ -2,7 +2,7 @@ import { Project, SkillCategory, Certificate, EducationItem, PersonalInfo } from
 
 export const PERSONAL_INFO: PersonalInfo = {
   name: 'Adarsh Chaudhary',
-aZq  title: 'Computer Science & Engineering Student (AI & ML Specialization - 2nd Year)',
+  title: 'Computer Science & Engineering Student (AI & ML Specialization - 2nd Year)',
   subtitle: 'AI & ML Specialization • Full-Stack Developer • IoT Systems Enthusiast • Cyber Safety Advocate',
   bio: '2nd-year CSE undergraduate specializing in Artificial Intelligence & Machine Learning at Lovely Professional University. Passionate about machine learning models, scalable full-stack web applications, embedded IoT safety hardware, and driving community digital literacy & cybersecurity awareness.',
   email: 'aachaudhary234@gmail.com',
